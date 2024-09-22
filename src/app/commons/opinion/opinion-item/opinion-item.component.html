@@ -1,0 +1,21 @@
+<div class="comment-block">
+    <div class="comment-text">
+        {{content}}
+    </div> 
+    <div class="comment-inf">
+       <div class="comment-bar-inf">
+        <div class="author-inf">
+            <div class="author-name">{{name}}</div>
+            <div class="author-title">{{title}}</div>
+        </div>
+       </div> 
+       <img [src]="imageUrl" alt="" class="comment-img">
+       <div class="star">
+        <img src="assets/images/star.png" alt="" *ngFor="let n of numSequence()">
+        <ng-template  [ngIf]="(5-star)>0">
+        <img src="assets/images/star-empty.png" alt="" *ngFor="let n of numSequenceN(5-star)">
+        </ng-template>
+       </div>
+       <img src="assets/images/quote.png" alt="" class="quote">
+    </div>
+</div>

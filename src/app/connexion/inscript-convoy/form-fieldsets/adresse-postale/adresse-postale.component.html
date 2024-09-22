@@ -1,0 +1,27 @@
+<fieldset>
+    <h4>ADRESSE POSTALE</h4>
+    <div class="form-content">
+        <div class="form-group">
+            <label for="">Adresse*</label>
+            <input type="text" placeholder="Saisissez votre adresse">
+        </div>
+        <div class="form-group">
+            <label for="">Ville *</label>
+            <input type="text" placeholder="Saisissez votre ville">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Code postal *</label>
+            <input type="text" placeholder="Saisissez votre code postal">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Complément d'adresse</label>
+            <input type="text" placeholder="(Porte, Numéro batiment,..)">
+        </div>
+        
+    </div>
+    <div class="btn-change-page">
+        <button type="button" (click)="previous()"><img src="assets/images/backArrow.png" alt="" class="mr-14"> Précédent </button>
+        <button type="button" class="next-btn" onclick="change(1)">Suivant <img src="assets/images/next-white.png" alt="" class="ml-14"> </button>
+    </div>
+   
+</fieldset>

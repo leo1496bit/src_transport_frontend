@@ -1,0 +1,52 @@
+<header class="header-xl">
+    <img src="assets/images/logo.png" alt="" class="logo">
+    <div class="nav-header">
+        <div class="nav-connect">
+            <div class="ico-lang">
+                <img src="assets/images/usa.png" alt="" class="icon-lang">
+                <img src="assets/images/german.png" alt="" class="icon-lang">
+                <img src="assets/images/france.png" alt="" class="icon-lang">
+            </div>
+            <div class="connect-link">
+               <a [routerLink]="'/connexion'"><img src="assets/icon/sms-bubble.png" alt="" width="13.97"> ESPACE CONNEXION</a> 
+            </div>
+        </div>
+        <nav>
+           <div class="nav-item"><a [routerLink]="'/home'"  routerLinkActive="active-link">HOME</a></div> 
+          <div class="nav-item nav-drop-down"> <label for="drop-down">NOS SERVICES <img src="assets/images/nextArrow.png" alt=""></label>
+            <input type="checkbox" id="drop-down">
+            <ul class="drop-down">
+                <li><a [routerLink]="'/assurance-convoyage'" routerLinkActive="active-link">ASSURANCE COVOYAGE</a></li>
+                <li><a [routerLink]="'/a-propos'" routerLinkActive="active-link">A PROPOS</a></li>
+            </ul>
+            </div>
+           <div class="nav-item"> <a [routerLink]="'/inscription-entreprise'" routerLinkActive="active-link">SOLUTION ENTREPRISE</a> </div>
+           <div class="nav-item"><a [routerLink]="'/inscription-convoyeur'" routerLinkActive="active-link"> DEVENIR DRIVER</a></div>
+        </nav>
+    </div>
+</header>
+<header class="header-small">
+<img src="assets/images/logo.png" alt="" class="logo">
+<a [routerLink]="'/connexion'"><button class="btn btn-yellow">ESPACE CONNEXION</button></a>
+<input type="checkbox" id="input-burger"><label  for="input-burger" class="pointer"><img src="assets/icon/burger.png" alt="" class="burger"></label>
+<input type="checkbox" id="input-close" name="">
+<div class="navbar-xs">
+    <div class="navbar-xs-header ">
+        <h5 class="navbar-xs-title">SRC TRANSPORT</h5>
+      <label for="input-burger" class="pointer">
+        <img src="assets/icon/gtk-close.png" class="close-btn" alt="">
+      </label>  
+    </div>
+    <div class="nav-xs-body">
+        <div class="nav-xs-item"><a [routerLink]="'/home'" routerLinkActive="active-link">HOME</a></div>
+        <div class="nav-xs-item"> NOS SERVICES</div>
+        <ul class="drop-down-xs">
+            <li class="nav-xs-item"><a [routerLink]="'/assurance-convoyage'" routerLinkActive="active-link">ASSURANCE COVOYAGE</a></li>
+            <li class="nav-xs-item"><a [routerLink]="'/a-propos'" routerLinkActive="active-link">A PROPOS</a></li>
+        </ul>
+        <div class="nav-xs-item"><a [routerLink]="'/inscription-entreprise'" routerLinkActive="active-link"> SOLUTION ENTREPRISE</a></div>
+        <div class="nav-xs-item"><a [routerLink]="'/inscription-convoyeur'" routerLinkActive="active-link"> DEVENIR DRIVER</a></div>
+
+    </div>
+</div>
+</header>
