@@ -7,11 +7,12 @@ import { Router,IsActiveMatchOptions} from '@angular/router';
   styleUrl: './form-progress.component.css'
 })
 export class FormProgressComponent {
-  fieldsetsUrl:any[] = ['inscript-convoy/informations-chauffeur','inscript-convoy/adresse-postale']
+  fieldsetsUrl:any[] = ['inscript-convoy/informations-chauffeur','inscript-convoy/adresse-postale',
+    'inscript-convoy/information','inscript-convoy/circulation', 'inscript-convoy/information-permis',
+    'inscript-convoy/document-identite','inscript-convoy/document-professionnel', 'inscript-convoy/information-bancaire']
   constructor(private route:Router){}
 
   isActive(url:string){
-    console.log(this.route.isActive(url,{matrixParams:"ignored",queryParams:"ignored",paths:'exact',fragment:'ignored'}))
   return this.route.isActive(url,{matrixParams:"ignored",queryParams:"ignored",paths:'exact',fragment:'ignored'})
   }
   isFill(url:string){

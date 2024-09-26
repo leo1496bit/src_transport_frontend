@@ -1736,6 +1736,7 @@ p.foot-text{
     border-bottom-left-radius:21px;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .form-progress-group{
     display:block;
@@ -1923,6 +1924,9 @@ p.foot-text{
     font-family: Arial,sans-serif;
     font-weight: 700;
     height: 100%;
+}
+*:has(fieldset .form-content){
+    width: 100%;
 }
 .diag-type-car .form-transport{
     width: unset;
@@ -2316,7 +2320,8 @@ p.foot-text{
         font-size: 10px;
     }
     .insc-form .form-progress-element{
-        font-size: 10px;
+        font-size: 9px;
+        line-height: 12px;
         margin-left: 20px;
     }
     .form-progress-element p{
@@ -2325,10 +2330,10 @@ p.foot-text{
     .insc-form .form-progress-element p{
         padding-left: 21px;
     }
-    .form-field-car{
+ 
+    app-form-field-car{
         max-width: 142px;
         display:flex;
-        flex-direction: column;
     }
     .form-transport h4,.form-transport h5{
         font-size: 16px;
@@ -2558,6 +2563,7 @@ p.foot-text{
     }
     .btn-change-page{
         margin:7px;
+        margin-top:auto;
     }
 }
 .art-infos{

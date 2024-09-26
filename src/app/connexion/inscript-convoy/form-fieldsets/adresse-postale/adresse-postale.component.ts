@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { PageFormService } from '../../../../services/page-form/page-form.service';
 
 @Component({
   selector: 'app-adresse-postale',
@@ -7,11 +8,13 @@ import { Router } from '@angular/router';
   styleUrl: './adresse-postale.component.css'
 })
 export class AdressePostaleComponent {
-  constructor(private router:Router){}
+  previousPage = '/inscript-convoy/informations-chauffeur';
+  nextPage = '/inscript-convoy/information';
+  constructor(private pageForm:PageFormService){}
   next(){
-    this.router.navigate(['/inscript-convoy/adresse-postale'])
+   this.pageForm.changeTo(this.nextPage)
   }
   previous(){
-    this.router.navigate(['/inscript-convoy/informations-chauffeur'])
+    this.pageForm.changeTo(this.previousPage);
   }
 }

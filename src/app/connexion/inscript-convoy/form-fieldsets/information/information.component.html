@@ -1,0 +1,48 @@
+<fieldset>
+    <h5>INFORMATION ENTREPRISE</h5>
+    <div class="form-content">
+        <div class="form-group">
+            <label for="">Statut de la societé*</label>
+            <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other">
+                <option value="sarl">SAS</option>
+                <option value="sarl">SARL</option>
+                <option value="sarl">EURL</option>
+                <option value="sarl">EI</option>
+                <option value="sarl">SASU</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">Numero de siret*</label>
+            <input type="text" placeholder="799250450">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Nom entreprise partner*</label>
+            <input type="text" placeholder="Saisissez votre nom d'entreprise">
+        </div>
+        
+    </div>
+    <h5>QUELLE LANGUE PARLEZ-VOUS</h5>
+    <div class="lang">
+            <div class="form-group-line mr-30">
+                <input type="checkbox" name="" id="">
+                <label for="">Français</label>
+            </div>
+            <div class="form-group-line">
+                <input type="checkbox" name="" id="">
+                <label for="">English</label>
+            </div> 
+            <div class="form-group-line">
+                <input type="checkbox" name="" id="">
+                <label for="">German</label>
+            </div> 
+            <div class="form-group-line">
+                <input type="checkbox" name="" id="">
+                <label for="">Italiano</label>
+            </div>  
+    </div>
+    <div class="btn-change-page">
+        <button type="button" (click)="previous()"><img src="assets/images/backArrow.png" alt="" class="mr-14"> Précédent </button>
+        <button type="button" class="next-btn" (click)="next()">Suivant <img src="assets/images/next-white.png" alt="" class="ml-14"> </button>
+    </div>
+   
+</fieldset>

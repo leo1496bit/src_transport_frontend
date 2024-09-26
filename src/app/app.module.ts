@@ -35,6 +35,17 @@ import { FormFieldCarComponent } from './connexion/inscript-convoy/form-field-ca
 import { InformationsChauffeurComponent } from './connexion/inscript-convoy/form-fieldsets/informations-chauffeur/informations-chauffeur.component';
 import { FormTransportComponent } from './connexion/inscript-convoy/form-transport/form-transport.component';
 import { AdressePostaleComponent } from './connexion/inscript-convoy/form-fieldsets/adresse-postale/adresse-postale.component';
+import { InformationComponent } from './connexion/inscript-convoy/form-fieldsets/information/information.component';
+import { CirculationComponent } from './connexion/inscript-convoy/form-fieldsets/circulation/circulation.component';
+import { InformationPermisComponent } from './connexion/inscript-convoy/form-fieldsets/information-permis/information-permis.component';
+import { DocumentIdentiteComponent } from './connexion/inscript-convoy/form-fieldsets/document-identite/document-identite.component';
+import { DocumentProfessionnelComponent } from './connexion/inscript-convoy/form-fieldsets/document-professionnel/document-professionnel.component';
+import { InformationBancaireComponent } from './connexion/inscript-convoy/form-fieldsets/information-bancaire/information-bancaire.component';
+import { InscriptClientComponent } from './connexion/inscript-client/inscript-client.component';
+import { FormFieldCarClientComponent } from './connexion/inscript-client/form-field-car-client/form-field-car-client.component';
+import { FormProgressClientComponent } from './connexion/inscript-client/form-progress-client/form-progress-client.component';
+import { InformationsChauffeurClientComponent } from './connexion/inscript-client/form-fieldsets/informations-chauffeur-client/informations-chauffeur-client.component';
+import { AdresseSiegeSocialComponent } from './connexion/inscript-client/form-fieldsets/adresse-siege-social/adresse-siege-social.component';
 
 
 
@@ -73,6 +84,17 @@ import { AdressePostaleComponent } from './connexion/inscript-convoy/form-fields
     InformationsChauffeurComponent,
     FormTransportComponent,
     AdressePostaleComponent,
+    InformationComponent,
+    CirculationComponent,
+    InformationPermisComponent,
+    DocumentIdentiteComponent,
+    DocumentProfessionnelComponent,
+    InformationBancaireComponent,
+    InscriptClientComponent,
+    FormFieldCarClientComponent,
+    FormProgressClientComponent,
+    InformationsChauffeurClientComponent,
+    AdresseSiegeSocialComponent,
   ],
   imports: [
     BrowserModule,
