@@ -1,0 +1,20 @@
+<div class="form-progress-group" [ngClass]="{'d-none':!fieldInfo}">
+    <div class="form-progress-element" [ngClass]="{'active':isActive('ask-command-form/adresse-depart'),'fill':isFill('ask-command-form/adresse-depart')}">
+        <div class="circle"></div> <div class="circle-select"></div> <p>Adresse de départ</p> 
+    </div>
+    <div class="form-progress-element" [ngClass]="{'active':isActive('ask-command-form/adresse-livraison'),'fill':isFill('ask-command-form/adresse-livraison')}">
+        <div class="circle"></div> <div class="circle-select"></div> <p>Adresse de livraison</p> 
+    </div>
+    <div class="form-progress-element" [ngClass]="{'active':isActive('ask-command-form/informations-vehicule'),'fill':isFill('ask-command-form/informations-vehicule')}">
+        <div class="circle"></div> <div class="circle-select"></div> <p>Informations du véhicule</p> 
+    </div>
+    <div class="form-progress-element" [ngClass]="{'active':isActive('ask-command-form/plage-horaire-vehicule'),'fill':isFill('ask-command-form/plage-horaire-vehicule')}">
+        <div class="circle"></div> <div class="circle-select"></div> <p>Plage horaire du véhicule</p> 
+    </div>
+    <div class="form-progress-element" [ngClass]="{'active':isActive('ask-command-form/informations-client'),'fill':isFill('ask-command-form/informations-client')}">
+        <div class="circle"></div> <div class="circle-select"></div> <p>Informations du client</p> 
+    </div>
+    <div class="form-progress-element border-none" [ngClass]="{'':isChangeField()}">
+        <div class="circle"></div> <div class="circle-select"></div> <p>Prestations supplémentaires</p> 
+    </div>
+</div>

@@ -13,11 +13,10 @@
         </div>
         <nav>
            <div class="nav-item"><a [routerLink]="'/home'"  routerLinkActive="active-link">HOME</a></div> 
-          <div class="nav-item nav-drop-down"> <label for="drop-down">NOS SERVICES <img src="assets/images/nextArrow.png" alt=""></label>
-            <input type="checkbox" id="drop-down">
-            <ul class="drop-down">
+          <div class="nav-item nav-drop-down" (click)="toggle()"> <label for="drop-down">NOS SERVICES <img src="assets/images/nextArrow.png" alt=""></label>
+            <ul class="drop-down" [ngClass]="{'open-nav':open}">
                 <li><a [routerLink]="'/assurance-convoyage'" routerLinkActive="active-link">ASSURANCE COVOYAGE</a></li>
-                <li><a [routerLink]="'/a-propos'" routerLinkActive="active-link">A PROPOS</a></li>
+                <li><a [routerLink]="'/a-propos'" routerLinkActive="active-link" >A PROPOS</a></li>
             </ul>
             </div>
            <div class="nav-item"> <a [routerLink]="'/inscription-entreprise'" routerLinkActive="active-link">SOLUTION ENTREPRISE</a> </div>

@@ -19,6 +19,15 @@ import { InformationBancaireComponent } from './connexion/inscript-convoy/form-f
 import { InscriptClientComponent } from './connexion/inscript-client/inscript-client.component';
 import { InformationsChauffeurClientComponent } from './connexion/inscript-client/form-fieldsets/informations-chauffeur-client/informations-chauffeur-client.component';
 import { AdresseSiegeSocialComponent } from './connexion/inscript-client/form-fieldsets/adresse-siege-social/adresse-siege-social.component';
+import { AskCommandFormComponent } from './ask-command-form/ask-command-form.component';
+import { AdresseDepartComponent } from './ask-command-form/form-fieldsets/adresse-depart/adresse-depart.component';
+import { AdresseLivraisonComponent } from './ask-command-form/form-fieldsets/adresse-livraison/adresse-livraison.component';
+import { InformationsVehiculeComponent } from './ask-command-form/form-fieldsets/informations-vehicule/informations-vehicule.component';
+import { PlageHoraireVehiculeComponent } from './ask-command-form/form-fieldsets/plage-horaire-vehicule/plage-horaire-vehicule.component';
+import { InformationsClientComponent } from './ask-command-form/form-fieldsets/informations-client/informations-client.component';
+import { PrestatiionsSupplementairesComponent } from './ask-command-form/form-fieldsets/prestatiions-supplementaires/prestatiions-supplementaires.component';
+import { PaiementComponent } from './ask-command-form/form-fieldsets/paiement/paiement.component';
+import { TarificationConvoyageComponent } from './tarification-convoyage/tarification-convoyage.component';
 
 const routes: Routes = [
   {path:"home",component: HomeComponent},
@@ -28,6 +37,7 @@ const routes: Routes = [
   {path:'assurance-convoyage',component:AssuranceConvoyageComponent},
   {path:'a-propos', component:AProposComponent},
   {path:'connexion', component:ConnexionComponent},
+  {path: 'tarification-convoyage', component:TarificationConvoyageComponent},
   {path: 'inscript-convoy',component:InscriptConvoyComponent , children:[
     {path: 'informations-chauffeur',component:InformationsChauffeurComponent},
     {path: '', redirectTo: '/inscript-convoy/informations-chauffeur',pathMatch:'full'},
@@ -45,7 +55,17 @@ const routes: Routes = [
     {path: '', redirectTo: '/inscript-client/informations-chauffeur',pathMatch:'full'},
     {path: 'adresse-siege-social', component:AdresseSiegeSocialComponent}
   ]},
-  {path: 'inscript-convoy/cond-inscription', component:CondInscriptionComponent}
+  {path: 'inscript-convoy/cond-inscription', component:CondInscriptionComponent},
+  {path: 'ask-command-form',component:AskCommandFormComponent, children:[
+    {path: 'adresse-depart', component:AdresseDepartComponent},
+    {path: '',redirectTo:'/ask-command-form/adresse-depart',pathMatch:'full'},
+    {path: 'adresse-livraison', component:AdresseLivraisonComponent},
+    {path: 'informations-vehicule', component:InformationsVehiculeComponent},
+    {path: 'plage-horaire-vehicule', component:PlageHoraireVehiculeComponent},
+    {path: 'informations-client', component:InformationsClientComponent},
+    {path: 'prestations-supplementaires',component:PrestatiionsSupplementairesComponent},
+    {path: 'paiement', component:PaiementComponent}
+  ]}
 ];
 
 @NgModule({

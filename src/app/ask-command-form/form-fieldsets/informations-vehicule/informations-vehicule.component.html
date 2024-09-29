@@ -1,0 +1,38 @@
+<fieldset>
+    <h4>Informations du véhicule</h4>
+    <div class="form-content">
+        <div class="form-group">
+            <label for="">Modèle du véhicule *</label>
+            <input type="text" placeholder="Modèle du véhicule*">
+        </div>
+        <div class="form-group">
+            <label for="">Marque du véhicule *</label>
+            <select name="" id="" autocomplete="on" >
+                <option value="sarl">BMW</option>
+                <option value="sarl">Renauld</option>
+                <option value="sarl">Audi</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">Plaque d'immatriculation *</label>
+            <input type="text" placeholder="Plaque d'immatriculation *">
+        </div>
+        <div class="form-group">
+            <label for="">Châssis du véhicule *</label>
+            <input type="text" placeholder="Châssis du véhicule *">
+        </div>
+        <div class="form-group-line">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <label for=""> Demande de convoyage avec w garage </label>
+        </div>
+
+    </div>
+    <div class="btn-change-page">
+        <button type="button" (click)="previous()"><img src="assets/images/backArrow.png" alt="" class="mr-14"> Précédent </button>
+        <button type="button" class="next-btn" (click)="next()">Suivant <img src="assets/images/next-white.png" alt="" class="ml-14"> </button>
+    </div>
+   
+</fieldset>

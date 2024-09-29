@@ -1,0 +1,27 @@
+<fieldset>
+    <h4>Informations du client</h4>
+    <div class="form-content">
+        <div class="form-group">
+            <label for="">E-mail doneur d'ordre *</label>
+            <input type="text" placeholder="E-mail doneur d'ordre *">
+        </div>
+        <div class="form-group">
+            <label for="">Numéro de téléphone*</label>
+            <input type="text" placeholder="Numéro de téléphone*">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Nom societé donneur d'ordre *</label>
+            <input type="text" placeholder="Nom societé donneur d'ordre *">
+        </div>
+        
+        <div class="form-group w-full">
+            <label for="">Instruction du client *</label>
+            <textarea name="" id="" placeholder="veuillez donner des consignes pour le client "></textarea>    
+        </div>
+    </div>
+    <div class="btn-change-page">
+        <button type="button" (click)="previous()"><img src="assets/images/backArrow.png" alt="" class="mr-14"> Précédent </button>
+        <button type="button" class="next-btn" (click)="next()">Suivant <img src="assets/images/next-white.png" alt="" class="ml-14"> </button>
+    </div>
+   
+</fieldset>

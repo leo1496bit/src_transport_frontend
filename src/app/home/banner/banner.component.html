@@ -16,7 +16,7 @@
     </div>
     <div class="devis-banner">
         <h4>Obtenez votre  devis en  1 minute</h4>
-        <form action="page1.html" class="devis-address m-auto form-2">
+        <form (submit)="submit($event)" class="devis-address m-auto form-2">
             <div class="input-address">
              <img src="assets/images/addr-green.png" alt="" class="addr-ico">   <input type="text"  placeholder="Adresse de depart">
             </div>
@@ -29,47 +29,6 @@
        
         <div class="triangle t-bottom"></div>
         <div class="triangle t-top"></div>
-        <dialog class="diag-type-car">
-            <div class="form-car-mission insc-form form-client">
-                <div class="form-field-car">
-                    <div class="title-logo">
-                        <p>
-                            Sélectionnez le type de véhicule à convoyer
-                        </p>
-                    </div>
-                    <div class="form-progress-group">
-                       <img src="assets/images/car-bmw.png" alt="">
-                    </div>
-                </div>
-                <form action="page1.html" class="form-transport">
-                    <fieldset>
-                        <div class="form-content">
-                            <div class="form-group w-full">
-                                <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other">
-                                    <option value="Statut de la societé">Type de véhicule</option>
-                                    <option value="sarl">Berline</option>
-                                    <option value="sarl">Utilitaire</option>
-                                </select>
-                            </div>
-                            <div class="form-group w-full">
-                                <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other">
-                                    <option value="Statut de la societé">Qui vous êtes</option>
-                                    <option value="sarl">Societe</option>
-                                    <option value="sarl">Particulier</option>
-                                </select>
-                            </div>
-                            <div class="form-group-line mr-30">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Avec Restitution</label>
-                            </div>
-                        </div>
-                        <div class="btn-change-page">
-                            <button class="btn btn-yellow"> Obtenir Mon Tarif</button>
-                        </div>
-                        <div class="close" onclick="closeModal()">X</div>
-                    </fieldset>
-                </form>
-              </div> 
-        </dialog>
+        <app-diag-type-car [(isOpen)]="open"></app-diag-type-car>
     </div>
    </div> 

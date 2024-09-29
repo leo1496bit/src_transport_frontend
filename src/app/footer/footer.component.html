@@ -1,5 +1,5 @@
-<app-chatbot></app-chatbot>
-<app-chat-message></app-chat-message>
+<app-chatbot (openChat)="openChat=true"></app-chatbot>
+<app-chat-message [(openChat)]="openChat"></app-chat-message>
 <footer>
     <h5 class="foot-title"> <img src="assets/images/anonym.png" alt="" width="68"> Nos driver partner couvrent l'ensemble des régions de France,</h5>
     <h4 class="d-number">+97</h4>

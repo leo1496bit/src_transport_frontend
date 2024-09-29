@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  isChecked: boolean = false;
+  open=false;
+
+  toggle(){
+    this.open=!this.open;
+  }
+  test(){
+    console.log('test')
+  }
 
 }

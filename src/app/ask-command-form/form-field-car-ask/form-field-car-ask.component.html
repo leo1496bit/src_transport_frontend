@@ -1,0 +1,25 @@
+<div class="form-field-car">
+    <div class="title-logo">
+        <img src="assets/images/form-logo.png" alt="">
+        <p>
+            Besoin de déplacer votre véhicule ?
+            Remplissez notre formulaire de commande ici !
+        </p>
+    </div>
+    <app-form-progress-ask [(fieldInfo)]="fieldInfo"></app-form-progress-ask>
+    <div class="form-prog-finalize" [ngClass]="{'d-none':fieldInfo}">
+        <h4>Demande  de  convoyage N*120</h4>
+        <p>59€</p>
+        <p>Mission , 1200</p>
+        <h5>Nos Prestation De Convoyage Inclus</h5>
+        <ul>
+            <li>Carburant</li>
+            <li>Transport</li>
+            <li>Péage,</li>
+            <li>Lavage</li>
+            <li>W garage</li>
+        </ul>
+    </div>
+
+    <div class="logo-form"><img src="assets/images/logo.png" alt="" class="logo"></div>
+</div>

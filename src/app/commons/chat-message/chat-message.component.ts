@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-chat-message',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './chat-message.component.css'
 })
 export class ChatMessageComponent {
+  @Input() openChat:boolean = false;
+  @Output() openChatChange =  new EventEmitter<boolean>();
 
+  closeChat(){
+    this.openChatChange.emit(false);
+  }
 }

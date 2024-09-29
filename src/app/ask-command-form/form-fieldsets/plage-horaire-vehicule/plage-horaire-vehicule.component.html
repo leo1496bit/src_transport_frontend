@@ -1,0 +1,18 @@
+<fieldset>
+    <h4>Plage horaire du véhicule</h4>
+    <div class="form-content">
+        <div class="form-group w-full">
+            <label for="">Disponibilité du vehicule à partir du *</label>
+            <input type="date" placeholder="Disponibilité du vehicule à partir du *">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Livraison au plus tard le *</label>
+            <input type="date" placeholder="Livraison au plus tard le *">
+        </div>
+    </div>
+    <div class="btn-change-page">
+        <button type="button" (click)="previous()"><img src="assets/images/backArrow.png" alt="" class="mr-14"> Précédent </button>
+        <button type="button" class="next-btn" (click)="next()">Suivant <img src="assets/images/next-white.png" alt="" class="ml-14"> </button>
+    </div>
+   
+</fieldset>

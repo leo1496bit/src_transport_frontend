@@ -114,9 +114,14 @@ nav{
 .nav-drop-down label{
     cursor: pointer;
 }
+
 #drop-down:checked ~ .drop-down{
     transform: translateY(15px);
 }
+.open-nav{
+    transform: translateY(15px);   
+}
+
 #drop-down{
     visibility: hidden;
 }
@@ -277,6 +282,9 @@ nav{
     transition: transform ease-in-out 0.5s;
     transform:translateX(200%);
     z-index: 3;
+}
+.chat-open{
+    transform:translateX(0%);
 }
 .chat-title{
     border-bottom: 1px rgba(0, 0, 0, 0.25) solid;
@@ -1572,6 +1580,9 @@ p.foot-text{
     border-radius: 25px;
     padding: 15px;
 }
+app-reserv-box{
+    flex:1
+}
 .reserv-box h4{
     background-color:white ;
     color:var(--blue-theme-color);
@@ -1608,7 +1619,7 @@ p.foot-text{
 .price-ttc{
     font-size:24px;
     color:var(--lemon-color);
-    transform:translate(-50px,-50px );
+    transform:translate(-36px,-50px );
     display:inline-block;
 }
 .price-ttc span{
@@ -1820,7 +1831,6 @@ p.foot-text{
 .form-prog-finalize{
     font-family: Inter;
     font-size:20px;
-    display: none;
 }
 .form-prog-finalize h4, .form-prog-finalize p:nth-of-type(2){
     font-weight: 400;
@@ -1925,8 +1935,11 @@ p.foot-text{
     font-weight: 700;
     height: 100%;
 }
-*:has(fieldset .form-content){
+*:has(.form-transport.trans fieldset .form-content){
     width: 100%;
+}
+app-diag-type-car .form-transport{
+    height:unset;
 }
 .diag-type-car .form-transport{
     width: unset;

@@ -46,6 +46,22 @@ import { FormFieldCarClientComponent } from './connexion/inscript-client/form-fi
 import { FormProgressClientComponent } from './connexion/inscript-client/form-progress-client/form-progress-client.component';
 import { InformationsChauffeurClientComponent } from './connexion/inscript-client/form-fieldsets/informations-chauffeur-client/informations-chauffeur-client.component';
 import { AdresseSiegeSocialComponent } from './connexion/inscript-client/form-fieldsets/adresse-siege-social/adresse-siege-social.component';
+import { AskCommandFormComponent } from './ask-command-form/ask-command-form.component';
+import { FormFieldCarAskComponent } from './ask-command-form/form-field-car-ask/form-field-car-ask.component';
+import { FormProgressAskComponent } from './ask-command-form/form-progress-ask/form-progress-ask.component';
+import { AdresseDepartComponent } from './ask-command-form/form-fieldsets/adresse-depart/adresse-depart.component';
+import { AdresseLivraisonComponent } from './ask-command-form/form-fieldsets/adresse-livraison/adresse-livraison.component';
+import { InformationsVehiculeComponent } from './ask-command-form/form-fieldsets/informations-vehicule/informations-vehicule.component';
+import { PlageHoraireVehiculeComponent } from './ask-command-form/form-fieldsets/plage-horaire-vehicule/plage-horaire-vehicule.component';
+import { InformationsClientComponent } from './ask-command-form/form-fieldsets/informations-client/informations-client.component';
+import { PrestatiionsSupplementairesComponent } from './ask-command-form/form-fieldsets/prestatiions-supplementaires/prestatiions-supplementaires.component';
+import { PaiementComponent } from './ask-command-form/form-fieldsets/paiement/paiement.component';
+import { DiagTypeCarComponent } from './home/banner/diag-type-car/diag-type-car.component';
+import { TarificationConvoyageComponent } from './tarification-convoyage/tarification-convoyage.component';
+import { BannerTarificationComponent } from './tarification-convoyage/banner-tarification/banner-tarification.component';
+import { ReservBoxComponent } from './tarification-convoyage/reserv-box/reserv-box.component';
+import { ReservBoxCreateComponent } from './tarification-convoyage/reserv-box-create/reserv-box-create.component';
+
 
 
 
@@ -94,7 +110,21 @@ import { AdresseSiegeSocialComponent } from './connexion/inscript-client/form-fi
     FormFieldCarClientComponent,
     FormProgressClientComponent,
     InformationsChauffeurClientComponent,
-    AdresseSiegeSocialComponent,
+    AskCommandFormComponent,
+    FormFieldCarAskComponent,
+    FormProgressAskComponent,
+    AdresseDepartComponent,
+    AdresseLivraisonComponent,
+    InformationsVehiculeComponent,
+    PlageHoraireVehiculeComponent,
+    InformationsClientComponent,
+    PrestatiionsSupplementairesComponent,
+    PaiementComponent,
+    DiagTypeCarComponent,
+    TarificationConvoyageComponent,
+    BannerTarificationComponent,
+    ReservBoxComponent,
+    ReservBoxCreateComponent
   ],
   imports: [
     BrowserModule,

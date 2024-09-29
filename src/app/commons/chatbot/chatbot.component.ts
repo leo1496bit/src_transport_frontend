@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-chatbot',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './chatbot.component.css'
 })
 export class ChatbotComponent {
+  @Output() openChat = new EventEmitter<any>();
 
+  putOpenChat(){
+    this.openChat.emit();
+  }
 }

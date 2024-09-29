@@ -1,10 +1,9 @@
 <div>
-    
-    <div class="chat">
+    <div class="chat" [ngClass]="{'chat-open': openChat}">
         <div class="chat-title">
             <div class="chat-title-name">Buddy</div>
             <div class="chat-status">Online</div>
-            <img src="assets/images/down.png" alt="" id="close-chat">
+            <img src="assets/images/down.png" alt="" id="close-chat" (click)="closeChat()">
         </div>
         <div class="chat-content">
             <div class="chat-item">

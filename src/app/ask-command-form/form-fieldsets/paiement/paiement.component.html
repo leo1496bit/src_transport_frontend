@@ -1,0 +1,82 @@
+<fieldset class="form-offer-finalize pay-form">
+    <div class="form-progress-group-horiz">
+        <div class="form-progress-element active">
+            <p>Adresse de départ</p> 
+        </div>
+        <div class="form-progress-element">
+             <p>Adresse de livraison</p> 
+        </div>
+        <div class="form-progress-element">
+           <p>Informations du véhicule</p> 
+        </div>
+        <div class="form-progress-element">
+             <p>Plage horaire du véhicule</p> 
+        </div>
+        <div class="form-progress-element">
+             <p>Informations du client</p> 
+        </div>
+        <div class="form-progress-element xax">
+             <p>Prestations supplémentaires</p> 
+        </div>
+        <div class="form-progress-element border-none ele-active">
+            <p>Paiement</p> 
+       </div>
+    </div>
+    <div class="card-logo-list">
+        <img src="assets/images/mastercard.png" alt="">
+        <img src="assets/images/gpay.png" alt="">
+        <img src="assets/images/paypal.png" alt="">
+        <img src="assets/images/apay.png" alt="">
+        <img src="assets/images/stripe.png" alt="">
+        <img src="assets/images/bcoin.png" alt="">
+    </div>
+    <h4>Vos informations</h4>
+    <div class="payment-details">
+        <div class="form-group w-full">
+        <input type="text" placeholder="Email:">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Information de la carte</label>
+            <div class="cb-num">
+                <input type="text" placeholder="0000 0000 0000 0000">
+                <div class="logo-cb">
+                    <img src="assets/images/visa.png" alt="">
+                    <img src="assets/images/master-xs.png" alt="">
+                    <img src="assets/images/discover.png" alt="">
+                </div>
+            </div>
+            <div class="cb-date-cvc">
+                <input type="text" placeholder="MM/AA:">
+                <input type="text" placeholder="CVC:">
+            </div>
+        </div>
+        <div class="form-group w-full">
+            <label for="">Nom du titulaire de la carte</label>
+            <input type="text" placeholder="Nom complet">
+        </div>
+        <div class="form-group w-full">
+            <label for="">Numéro de téléphone enregistré</label>
+            <input type="text" placeholder="Numéro de téléphone">
+        </div>
+        <div class="form-group-line">
+            <input type="checkbox" name="" id="">
+            <label for="">J'achète en tant qu'entreprise </label>
+        </div>
+        <div class="form-group w-full">
+            <label for="">Informations relatives à la TVA ®</label>
+            <div class="cb-num tva">
+                <input type="text" placeholder="Nom de l'entreprise">
+            </div>
+            <select name="" id="" class="bb-gray">
+                <option value="" class="country-ico"> FR VAT</option>
+                <option value="">ENG</option>
+            </select>
+            <input type="text" placeholder="FRAB123456789" class="inf-tva">
+        </div>
+    </div>
+    <div class="btn-change-page">
+        <button type="button" (click)="previous()"><img src="assets/images/backArrow.png" alt="" class="mr-14"> Précédent </button>
+        <button type="button" class="next-btn" (click)="submit()">Valider <img src="assets/images/next-white.png" alt="" class="ml-14"> </button>
+    </div>
+   
+</fieldset>
