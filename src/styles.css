@@ -1077,6 +1077,18 @@ p.foot-text{
     display:flex;
     justify-content:space-around;
 }
+.step-delivery-block{
+    display:flex;
+    justify-content: space-around;
+    margin:25px;
+}
+.carousel-block>h3{
+    font-size:50px;
+}
+.carousel-block{
+    flex-basis:400px;
+}
+
 .arrow-p{
     left:0;
 }
@@ -1100,14 +1112,32 @@ p.foot-text{
 .carousel-desc{
     max-width: 551px;
     font-family: Fira Sans;
-    text-align: center;
-    margin:auto;
+    text-align: left;
+    padding: 8px 37px;
+    padding-bottom: 70px;
+    position: relative;
+    border-left: 7px rgba(26, 34, 46, 1) solid;
+}
+.carousel-desc::before{
+    content:"";
+    width: 64px;
+    height:63px;
+    background: rgba(26, 34, 46, 1);
+    display: block;
+    border-radius: 15px;
+    position: absolute;
+    left:-38px;
+    top:-10px;
+}
+.carousel-desc.car-end{
+    border-left: none;
 }
 .carousel-desc p{
     font-size:17px;
 }
 .carousel-desc h4{
     font-size:22px;
+    margin: 0 ;
 }
 .carousel-item-image{
     width: 539px;
