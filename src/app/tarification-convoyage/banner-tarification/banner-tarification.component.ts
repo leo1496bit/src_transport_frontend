@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './banner-tarification.component.css'
 })
 export class BannerTarificationComponent {
-
+  orderChange = true;
+  reverse(){
+    this.orderChange=!this.orderChange;
+  }
 }

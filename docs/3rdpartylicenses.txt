@@ -243,6 +243,16 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
+Package: @geoapify/geocoder-autocomplete
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
+Package: @geoapify/angular-geocoder-autocomplete
+License: "MIT"
+
+
+--------------------------------------------------------------------------------
 Package: zone.js
 License: "MIT"
 

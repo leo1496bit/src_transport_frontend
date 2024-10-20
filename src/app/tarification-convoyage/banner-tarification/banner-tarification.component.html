@@ -14,11 +14,12 @@
     <div class="banner-form">
         <h4>Obtenez votre  devis en  1 minute</h4>
         <form action="" class="devis-address m-auto form-2">
-            <div class="input-address">
-                <img src="assets/images/addr-green.png" alt="" class="addr-ico">   <input type="text"  placeholder="Adresse de depart">
-               </div>
-               <div class="input-address">
-                   <img src="assets/images/addr-red.png" alt="" class="addr-ico">   <input type="text"  placeholder="Adresse de livraison">
+            <div class="input-address" [ngClass]="{'order-0':orderChange,'order-2':!orderChange}">
+                <img src="assets/images/addr-green.png" alt="" class="addr-ico">   <geoapify-geocoder-autocomplete placeholder="Adresse de départ" lang="fr"></geoapify-geocoder-autocomplete>
+            </div>
+               <img src="assets/images/exchange.png" class="rev-btn" alt="" (click)="reverse()">
+               <div class="input-address" [ngClass]="{'order-0':!orderChange,'order-2':orderChange}">
+                   <img src="assets/images/addr-red.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete placeholder="Adresse de livraison" lang="fr"></geoapify-geocoder-autocomplete>
                   </div>
                <div class="input-s">
                 <div class="input-address s">

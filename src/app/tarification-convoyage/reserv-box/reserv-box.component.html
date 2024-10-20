@@ -1,31 +1,26 @@
 <div class="reserv-box mr-30">
     <h4>{{type}}</h4>
+    <hr color="yellow" size="1"/>
+    <div class="reserv-adr">
+        <p >28 rue du paradis, paris 75501</p>
+        <img src="assets/images/exchange.png" alt="" width="25">
+        <p> 28 rue du paradis, Marseille 13000</p>
+    </div>
     <img [src]="urlImg" alt="" class="car-image scale">
-    <div class="price-loc">{{priceHT}}€ <span>HT</span> <div class="price-ttc">{{priceTTC}}€ <span>TTC</span></div></div>
-    <div class="input-address in-addr-form">
-        <img src="assets/images/left-ico.png" alt="" class="addr2-ico"><label for="">DEPART:</label>   <input type="text">
-    </div>
-    <div class="input-address in-addr-form">
-        <img src="assets/images/delivery-ico.png" alt="" class="addr2-ico"><label for="">LIVRAISON:</label>   <input type="text" class="ms-1" >
-    </div>
+    <div class="price-loc">{{priceHT}}€  HT</div>
+    
     <p class="reserv-text">Le prix du trajet retour est équivalent à 50% du tarif appliqué pour le trajet aller.</p>
-    <p class="reserv-delay-text">Délai de livraison:  Max 7 jour/ Sous 48h en moyenne</p>
-    <h5>INCLUS</h5>
-    <form action="">
-        <div class="option-reserv">
-            <div>
-                <input type="checkbox" checked="checked" onclick="return false;"> <label for="">Carburant </label>
-            </div>
-            <div>
-                <input type="checkbox" checked="checked" onclick="return false;"> <label for="">Péage </label>
-            </div>
-            <div>
-                <input type="checkbox" checked="checked" onclick="return false;"> <label for="">Lavage </label>
-            </div>
-            <div>
-                <input type="checkbox" checked="checked" onclick="return false;"> <label for="">W garage </label>
-            </div>
-        </div>
-        <button type="submit" class="btn">RESERVER MA LIVRAISON</button>
-    </form>
+    <hr color="yellow" size="1"/>
+        <ul class="option-reserv">
+            <li>
+                <img src="assets/images/car_volant_edited.png" alt=""> <p>Livraison par chauffeur professionnelle </p>
+            </li>
+            <li>
+                <img src="assets/images/assurance_edited.png" alt=""> <p>Assurance convoyeur pro</p>
+            </li>
+            <li>
+                <img src="assets/images/money-card.png" alt=""> <p>Peage, lavage, w garage carburant inclus</p>
+            </li>
+        </ul>
+        <button type="submit" class="btn" (click)="onReserv()">RESERVER MA LIVRAISON</button>
 </div>

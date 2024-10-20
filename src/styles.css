@@ -671,10 +671,17 @@ p.foot-text{
     position: relative;
     height: 60px;
 }
+.order-0{
+    order:0;
+}
+.order-2{
+    order:2;
+}
 .rev-btn{
     width: 40px;
     height: 40px;align-self: center;
     margin-right: 35px;
+    order:1;
 }
 .input-address.s{
     height:unset;
@@ -682,9 +689,15 @@ p.foot-text{
 }
 .input-s{
     display: inline-grid;
+    order:3;
 }
-
-
+geoapify-geocoder-autocomplete{
+    display:block;
+    height:100%;
+}
+.geocoder-container{
+    height:100%;
+}
 .input-address input, .input-address select{
     height:91%;
     border-radius:4px;
@@ -699,7 +712,7 @@ p.foot-text{
     margin-left:35px;
 }
 .input-address input{
-    width: 80%;
+    width: 75%;
     margin-left: 35px;
     font-size: 18px;
     padding:0;
@@ -730,6 +743,7 @@ p.foot-text{
     padding:0.5rem 2em;
     height: 60px;
     align-self: center;
+    order:4;
 }
 .addr-ico, .addr2-ico{
     width: 15px;
@@ -1083,11 +1097,11 @@ p.foot-text{
     margin:25px;
 }
 .carousel-block>h3{
-    font-size:50px;
+    font-size:45px;
+    margin-top:0;
+    font-family: Inter;
 }
-.carousel-block{
-    flex-basis:400px;
-}
+
 
 .arrow-p{
     left:0;
@@ -1110,11 +1124,10 @@ p.foot-text{
     flex-direction: column;
 }
 .carousel-desc{
-    max-width: 551px;
+    max-width: 624px;
     font-family: Fira Sans;
     text-align: left;
-    padding: 8px 37px;
-    padding-bottom: 70px;
+    padding: 8px 0 70px 37px;
     position: relative;
     border-left: 7px rgba(26, 34, 46, 1) solid;
 }
@@ -1131,6 +1144,7 @@ p.foot-text{
 }
 .carousel-desc.car-end{
     border-left: none;
+    margin-left: 9px;
 }
 .carousel-desc p{
     font-size:17px;
@@ -1140,8 +1154,7 @@ p.foot-text{
     margin: 0 ;
 }
 .carousel-item-image{
-    width: 539px;
-    height: 302px;;
+    width: 100%;
 }
 @media screen and (max-width:1095px){
     .carousel-item{
@@ -1150,24 +1163,75 @@ p.foot-text{
     .carousel-item:nth-of-type(1){
         display:flex;
     }
-    
-}
- @media screen and (max-width:558px){
-    .carousel-item-image{
-        width: 100%;
-        height:224px;
+    .carousel-block > h3 {
+        font-size: 32px;
     }
-    .carousel-desc{
-        max-width: 278px;
-    }
-    .carousel-desc p{
-        font-size:11px;
+    .carousel-desc::before{
+        width: 32px;
+        height: 31px;
+        border-radius: 8px;
+        left: -19px;
+        top:-2px;
     }
     .carousel-desc h4{
         font-size: 16px;
     }
+    .carousel-desc p {
+        font-size: 14px;
+    }
+    .carousel-desc {
+        padding:0 0 15px 37px;
+    }
+    .carousel-item-image{
+       height: unset;
+       width: 100%;
+    }
+    .carousel-desc.car-end {
+        margin-left:7px;
+    }
+}
+@media screen and (max-width:715px) {
+    .carousel-block > h3 {
+        font-size: 20px;
+    }
+    .carousel-desc::before {
+        width: 22px;
+        height: 21px;
+        border-radius: 6px;
+        left: -14px;
+        top: -2px;
+    }
+    .carousel-desc {
+        padding: 0 0 10px 15px;
+    }
+    .carousel-desc h4 {
+        font-size: 14px;
+    }
+    .carousel-desc p {
+        font-size: 11px;
+    }
+    .carousel-block{
+        max-width: 55%;
+    }
+}
+ @media screen and (max-width:558px){
+    .carousel-item-image{
+        width: 100%;
+    }
+    .carousel-desc{
+        max-width: 278px;
+    }
+    .carousel-desc h4 {
+        font-size: 12px;
+    }
+    .carousel-desc p {
+        font-size: 8px;
+    }
     .carrousel-icon{
         width: 32px;
+    }
+    .carousel-desc {
+        padding: 0px 0px 4px 12px;
     }
  } 
 .partner-logo{
@@ -1553,8 +1617,11 @@ p.foot-text{
         flex-wrap: wrap;
         margin: 45px 0;
     }
-    body{
+    .service-list, .some-image-group{
         background: rgba(239, 239, 239, 1);
+    }
+    .service-list{
+        margin-bottom: 0;
     }
     .loca{
         flex:1;
@@ -1601,6 +1668,11 @@ p.foot-text{
     justify-content: center;
     flex-wrap: wrap;
 }
+.reserv-adr{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 .reserv-box{
     flex:1;
     max-width: 398px;
@@ -1616,21 +1688,29 @@ app-reserv-box{
 .reserv-box h4{
     background-color:white ;
     color:var(--blue-theme-color);
-    width: 75%;
+    width: 100%;
     margin:auto;
     text-align: center;
     font-size: 20px;
     height: 40px;
     line-height:40px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
-.reserv-text{
+.reserv-box>hr{
+    margin-left: -15px;
+    margin-right: -15px;
+    color: var(--lemon-color);
+}
+.reserv-text {
     text-align: center;
+    font-style: italic;
+    color: var(--lemon-color);
+    font-size: 14px;
 }
 .car-image{
     display:block;
     margin:auto;
-    height: 194px;
+    height: 155px;
 }
 .img-auto{
     height:auto;
@@ -1638,10 +1718,10 @@ app-reserv-box{
 .scale{
     transform:scaleX(-1); 
 }
-.price-loc{
-    font-size: 70px;
+.price-loc {
+    font-size: 45px;
     position: relative;
-    text-align: right;
+    text-align: center;
 }
 .price-loc>span{
     font-size:15px;
@@ -1685,7 +1765,14 @@ app-reserv-box{
 }
 .option-reserv{
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding: 0;
+}
+.option-reserv li{
+    list-style: none;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
 }
 .reserv-box h5{
     font-size:17px;
@@ -1696,11 +1783,15 @@ app-reserv-box{
     font-size: 12px;
     vertical-align: text-top;
 }
-.option-reserv input{
-    accent-color:var(--lemon-color);
-    width: 18px;
-    height: 17px;
-} 
+.option-reserv img{
+    height: 35px;
+    align-self: center;
+}
+.option-reserv p{
+    font-size:14px;
+    position: absolute;
+    left: 60px;
+}
 .reserv-box .btn{
     width:100%;
     text-align: center;
@@ -1718,9 +1809,9 @@ app-reserv-box{
 }
 .text-part{
     text-align: center;
-    margin-bottom:132px;
+    margin-bottom:118px;
 }
-@media screen and (max-width:1205px) {
+@media screen and (max-width:1288px) {
     .reserv-box{
         flex:none;
         margin-bottom: 25px;

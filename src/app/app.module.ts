@@ -61,6 +61,7 @@ import { TarificationConvoyageComponent } from './tarification-convoyage/tarific
 import { BannerTarificationComponent } from './tarification-convoyage/banner-tarification/banner-tarification.component';
 import { ReservBoxComponent } from './tarification-convoyage/reserv-box/reserv-box.component';
 import { ReservBoxCreateComponent } from './tarification-convoyage/reserv-box-create/reserv-box-create.component';
+import { GeoapifyGeocoderAutocompleteModule } from '@geoapify/angular-geocoder-autocomplete';
 
 
 
@@ -128,7 +129,8 @@ import { ReservBoxCreateComponent } from './tarification-convoyage/reserv-box-cr
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GeoapifyGeocoderAutocompleteModule.withConfig('ba686c08a3174299b53dbda37ef955b5')
   ],
   providers: [],
   bootstrap: [AppComponent]

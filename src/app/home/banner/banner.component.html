@@ -17,16 +17,21 @@
     <div class="devis-banner">
         <h4>Obtenez votre  devis en  1 minute</h4>
         <form (submit)="submit($event)" class="devis-address m-auto form-2">
-            <div class="input-address">
-             <img src="assets/images/addr-green.png" alt="" class="addr-ico">   <input type="text"  placeholder="Adresse de depart">
+            <div class="input-address" [ngClass]="{'order-0':orderChange,'order-2':!orderChange}">
+             <img src="assets/images/addr-green.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete 
+             placeholder="Adresse de départ"
+             lang="fr"
+             (placeSelect)="placeSelected($event)"
+             >
+            </geoapify-geocoder-autocomplete> 
             </div>
-            <img src="assets/images/reverse.jpg" class="rev-btn" alt="">
-            <div class="input-address">
-                <img src="assets/images/addr-red.png" alt="" class="addr-ico">   <input type="text"  placeholder="Adresse de livraison">
+            <img src="assets/images/exchange.png" class="rev-btn" alt="" (click)="reverse()">
+            <div class="input-address" [ngClass]="{'order-0':!orderChange,'order-2':orderChange}">
+                <img src="assets/images/addr-red.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete placeholder="Adresse de livraison" lang="fr"></geoapify-geocoder-autocomplete>
                </div>
             <button class="btn">Calculer Le Prix</button>
         </form>
-       
+        
         <div class="triangle t-bottom"></div>
         <div class="triangle t-top"></div>
         <app-diag-type-car [(isOpen)]="open"></app-diag-type-car>

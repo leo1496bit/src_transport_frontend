@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reserv-box',
@@ -10,4 +11,11 @@ export class ReservBoxComponent {
   @Input() priceHT!:number;
   @Input() priceTTC!:number;
   @Input() urlImg!:string;
+  constructor(
+    private router:Router
+  ){}
+
+  onReserv(){
+    this.router.navigate(['/ask-command-form/adresse-depart']);
+  }
 }
