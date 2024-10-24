@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class ReservBoxComponent {
   @Input() type!:string;
+  @Input() userType!:string;
   @Input() priceHT!:number;
   @Input() priceTTC!:number;
   @Input() urlImg!:string;
+  @Input() departure!:string;
+  @Input() arrival!:string;
   constructor(
     private router:Router
   ){}

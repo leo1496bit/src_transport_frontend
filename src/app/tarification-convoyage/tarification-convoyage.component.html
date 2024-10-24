@@ -1,14 +1,12 @@
-<app-banner-tarification></app-banner-tarification>
+<app-banner-tarification (reloadSearch)="reload($event)"></app-banner-tarification>
 <div class="reserv-block">
     <app-reserv-box
-    type="BERLINE"
-    urlImg="assets/images/car6.png"
-    [priceHT]="58"
-    [priceTTC]="70" ></app-reserv-box>
-    <app-reserv-box
-    type="UTILITAIRE"
-    urlImg="assets/images/car2.png"
-    [priceHT]="58"
-    [priceTTC]="70"></app-reserv-box>
+    [type]="data.vehiculeType"
+    [urlImg]="data.imageCar"
+    [priceHT]="data.price"
+    [priceTTC]="70" 
+    [userType]="data.userType"
+    [arrival]="data.arrival"
+    [departure]="data.departure"></app-reserv-box>
     <app-reserv-box-create></app-reserv-box-create>
 </div>

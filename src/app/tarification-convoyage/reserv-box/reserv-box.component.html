@@ -1,14 +1,14 @@
 <div class="reserv-box mr-30">
-    <h4>{{type}}</h4>
+    <h4>{{type|uppercase}}</h4>
     <hr color="yellow" size="1"/>
     <div class="reserv-adr">
-        <p >28 rue du paradis, paris 75501</p>
+        <p >{{departure}}</p>
         <img src="assets/images/exchange.png" alt="" width="25">
-        <p> 28 rue du paradis, Marseille 13000</p>
+        <p> {{arrival}}</p>
     </div>
     <img [src]="urlImg" alt="" class="car-image scale">
-    <div class="price-loc">{{priceHT}}€  HT</div>
-    
+    <div class="price-loc" *ngIf="userType=='societe'">{{priceHT}}€  HT</div>
+    <div class="price-loc" *ngIf="userType=='particulier'">{{priceHT}}€  TTC</div>
     <p class="reserv-text">Le prix du trajet retour est équivalent à 50% du tarif appliqué pour le trajet aller.</p>
     <hr color="yellow" size="1"/>
         <ul class="option-reserv">

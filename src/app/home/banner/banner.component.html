@@ -27,13 +27,16 @@
             </div>
             <img src="assets/images/exchange.png" class="rev-btn" alt="" (click)="reverse()">
             <div class="input-address" [ngClass]="{'order-0':!orderChange,'order-2':orderChange}">
-                <img src="assets/images/addr-red.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete placeholder="Adresse de livraison" lang="fr"></geoapify-geocoder-autocomplete>
+                <img src="assets/images/addr-red.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete 
+                placeholder="Adresse de livraison" lang="fr"
+                (placeSelect)="placeSelectedEnd($event)"
+                ></geoapify-geocoder-autocomplete>
                </div>
-            <button class="btn">Calculer Le Prix</button>
+            <button class="btn pointer" [disabled]="checkIsNull(startAddress) || checkIsNull(endAddress)" (click)="calculateDistance()">Calculer Le Prix</button>
         </form>
         
         <div class="triangle t-bottom"></div>
         <div class="triangle t-top"></div>
-        <app-diag-type-car [(isOpen)]="open"></app-diag-type-car>
+        <app-diag-type-car [(isOpen)]="open" [distance]="distanceKm" [departure]="departure" [arrival]="arrival"></app-diag-type-car>
     </div>
    </div> 

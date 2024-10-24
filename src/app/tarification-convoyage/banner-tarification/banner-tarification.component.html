@@ -13,33 +13,38 @@
     </div>
     <div class="banner-form">
         <h4>Obtenez votre  devis en  1 minute</h4>
-        <form action="" class="devis-address m-auto form-2">
+        <form action="" class="devis-address m-auto form-2" [formGroup]="vehicleTypeForm" (ngSubmit)="submit()">
             <div class="input-address" [ngClass]="{'order-0':orderChange,'order-2':!orderChange}">
-                <img src="assets/images/addr-green.png" alt="" class="addr-ico">   <geoapify-geocoder-autocomplete placeholder="Adresse de départ" lang="fr"></geoapify-geocoder-autocomplete>
+                <img src="assets/images/addr-green.png" alt="" class="addr-ico">   <geoapify-geocoder-autocomplete 
+                placeholder="Adresse de départ"
+                (placeSelect)="placeSelected($event)"
+                lang="fr"></geoapify-geocoder-autocomplete>
             </div>
                <img src="assets/images/exchange.png" class="rev-btn" alt="" (click)="reverse()">
                <div class="input-address" [ngClass]="{'order-0':!orderChange,'order-2':orderChange}">
-                   <img src="assets/images/addr-red.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete placeholder="Adresse de livraison" lang="fr"></geoapify-geocoder-autocomplete>
+                   <img src="assets/images/addr-red.png" alt="" class="addr-ico">  <geoapify-geocoder-autocomplete 
+                   placeholder="Adresse de livraison" 
+                   lang="fr"
+                   (placeSelect)="placeSelectedEnd($event)"></geoapify-geocoder-autocomplete>
                   </div>
                <div class="input-s">
                 <div class="input-address s">
-                    <select name="" id="">
-                     <option value="" >Type de véhicule</option>
-                     <option value="">Citadine</option>
-                      <option value="">Berline</option>
-                      <option value="">Utilitaire</option>
-                      <option value="">Monospace</option>
+                    <select name="" id="" formControlName="vehicleType">
+                     <option value="type" >Type de véhicule</option>
+                     <option value="berline">Berline</option>
+                      <option value="utilitaire">Utilitaire</option>
+                      <option value="electrique">Electrique</option>
                     </select>
                  </div>
                  <div class="input-address s">
-                     <select name="" id="">
-                      <option value="" >Qui vous êtes:</option>
-                      <option value="">Particulier</option>
-                      <option value="">Entreprise</option>
+                     <select name="" id="" formControlName="userType">
+                      <option value="userType" >Qui vous êtes:</option>
+                      <option value="particulier">Particulier</option>
+                      <option value="societe">Entreprise</option>
                      </select>
                   </div>
                </div>
-               <button class="btn">Calculer Le Prix</button>
+               <button class="btn pointer" [disabled]="checkIsNull(startAddress) || checkIsNull(endAddress)">Calculer Le Prix</button>
            
         </form>
     </div>

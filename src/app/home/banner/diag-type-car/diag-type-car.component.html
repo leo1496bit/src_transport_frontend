@@ -10,21 +10,22 @@
                <img src="assets/images/car-bmw.png" alt="">
             </div>
         </div>
-        <form class="form-transport" (submit)="submit($event)" role="">
+        <form class="form-transport" (ngSubmit)="submit($event)" role="" [formGroup]="vehicleTypeForm">
             <fieldset>
                 <div class="form-content">
                     <div class="form-group w-full">
-                        <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other">
-                            <option value="Statut de la societé">Type de véhicule</option>
-                            <option value="sarl">Berline</option>
-                            <option value="sarl">Utilitaire</option>
+                        <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other" formControlName="vehicleType">
+                            <option value="type">Type de véhicule</option>
+                            <option value="berline">Berline</option>
+                            <option value="utilitaire">Utilitaire</option>
+                            <option value="electrique">Electrique</option>
                         </select>
                     </div>
                     <div class="form-group w-full">
-                        <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other">
-                            <option value="Statut de la societé">Qui vous êtes</option>
-                            <option value="sarl">Societe</option>
-                            <option value="sarl">Particulier</option>
+                        <select name="" id="" data-dashlane-rid="735e5eae7a3ec174" data-dashlane-classification="other" formControlName="userType">
+                            <option value="userType">Qui vous êtes</option>
+                            <option value="societe">Societe</option>
+                            <option value="particulier">Particulier</option>
                         </select>
                     </div>
                     <div class="form-group-line mr-30">
@@ -33,7 +34,7 @@
                     </div>
                 </div>
                 <div class="btn-change-page">
-                    <button class="btn btn-yellow"> Obtenir Mon Tarif</button>
+                    <button class="btn btn-yellow pointer"> Obtenir Mon Tarif</button>
                 </div>
                 <div class="close" (click)="changeStateDialog()">X</div>
             </fieldset>
