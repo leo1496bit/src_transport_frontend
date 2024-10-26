@@ -8,6 +8,9 @@ jobs:
   set-key-api:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - run: ls /home/runner/work/src_transport_frontend/src_transport_frontend
       - run: sed -i 's/MAP_API_KEY/$APIKEY/g' $FILE/src/index.html
         env:
