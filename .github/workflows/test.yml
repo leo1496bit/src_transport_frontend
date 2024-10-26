@@ -8,7 +8,7 @@ jobs:
   set-key-api:
     runs-on: ubuntu-latest
     steps:
-      - run: ls $FILE
+      - run: ls ${{ github.workspace }}
       - run: sed -i 's/MAP_API_KEY/$APIKEY/g' $FILE/src/index.html
         env:
           APIKEY: ${{ secrets.APIKEY }}
