@@ -20,7 +20,6 @@ jobs:
       - run: ng build --output-path docs --base-href ${{ github.workspace }}/
       - run: mv $FILE/docs/browser/* $FILE/docs/
       - run: cp $FILE/docs/index.html $FILE/docs/404.html
-      - run: ls $FILES/docs
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
