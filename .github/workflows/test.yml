@@ -16,5 +16,6 @@ jobs:
         env:
           APIKEY: ${{ secrets.APIKEY }}
           FILE: ${{ github.workspace }}
+      - run: cat ${{ github.workspace }}/src/index.html
       
       
