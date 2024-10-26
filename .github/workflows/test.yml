@@ -9,9 +9,9 @@ permissions:
   pages: write
   id-token: write
 jobs:
-  environment:
-      name: github-pages
   build:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     env: 
       APIKEY: ${{ secrets.APIKEY }}
