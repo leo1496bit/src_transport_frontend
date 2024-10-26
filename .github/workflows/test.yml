@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on:
+  push:
+    branches:
+      -test
+jobs:
+  set-key-api:
+    runs-on: ubuntu-latest
+    steps:
+       - run: sed -i 's/$APIKEY/secrets./g' ./src/index.html
+         env:
+          APIKEY: ${{ secrets.APIKEY }}
