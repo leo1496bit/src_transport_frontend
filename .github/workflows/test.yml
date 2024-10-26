@@ -36,16 +36,6 @@ jobs:
           path: ./docs/_site
           retention-days: 1
           name: github-pages-test
-      - name: Upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages-test
-          path: /home/runner/work/_temp/artifact.tar
-          if-no-files-found: error
-          retention-days: 1
-          compression-level: 6
-          overwrite: false
-          include-hidden-files: false
       - name: Deploy 
         uses: actions/deploy-pages@v4
         with:
