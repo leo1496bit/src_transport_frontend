@@ -9,9 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls ${{ github.workspace }}
-      - run: sed -i 's/MAP_API_KEY/$APIKEY/g' $FILE/src/index.html
-        env:
-          APIKEY: ${{ secrets.APIKEY }}
-          FILE: ${{ github.workspace }}
       
       
