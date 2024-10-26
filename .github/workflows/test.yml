@@ -20,10 +20,11 @@ jobs:
       - run: ng build --output-path docs --base-href ${{ github.workspace }}/
       - run: mv $FILE/docs/browser/* $FILE/docs/
       - run: cp $FILE/docs/index.html $FILE/docs/404.html
+      - run: ls $FILES/docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
           with:
-            path: $FILE/docs
+            path: $FILE/docs/
             retention-days: 1
       - name: Deploy 
         uses: actions/deploy-pages@v3
