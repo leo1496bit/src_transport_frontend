@@ -36,6 +36,7 @@ jobs:
           path: ./docs/_site
           retention-days: 1
           name: github-pages
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
