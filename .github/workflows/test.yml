@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - test
-permissions: read-all
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
