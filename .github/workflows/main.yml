@@ -5,7 +5,7 @@ on:
     branches:
       - test
 jobs:
-  build:
+  set-key-api:
     runs-on: ubuntu-latest
     env: 
       APIKEY: ${{ secrets.APIKEY }}
@@ -21,14 +21,7 @@ jobs:
       - run: mv $FILE/docs/browser/* $FILE/docs/
       - run: cp $FILE/docs/index.html $FILE/docs/404.html
       - run: ls $FILE/docs
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-          with:
-            path: ./docs/_site
-            retention-days: 1
-      - name: Deploy 
-        uses: actions/deploy-pages@v3
-          with:
-            token: ${{ github.token }}
+
+
       
       
