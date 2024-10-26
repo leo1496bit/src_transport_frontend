@@ -9,6 +9,8 @@ permissions:
   pages: write
   id-token: write
 jobs:
+  environment:
+      name: github-pages
   build:
     runs-on: ubuntu-latest
     env: 
@@ -35,12 +37,12 @@ jobs:
         with:
           path: ./docs/_site
           retention-days: 1
-          name: github-pages-test
+          name: github-pages
       - name: Deploy 
         uses: actions/deploy-pages@v4
         with:
           token: ${{ github.token }}
-          artifact_name: github-pages-test
+          artifact_name: github-pages
 
       
       
